@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Gerador de Numeros - Aleatório</title>
+</head>
+<body>
+    <div class="container">
+        <div class="titulo"><h1>Gerador de Números</h1></div>
+        <div class="sub-titulo"><h2>Faça seu chute!</h2></div>
+        <img class="logo" src="logo.png" alt="" srcset="">
+    </div>
+    <div class="second-container">
+        <label for="numero">Digite seu Número de 0 a 10:</label><br>
+        <input type="number" id="valor" placeholder="Digite um Número..."></div><br>
+        <button onclick= Gerar()>Gerar</button>
+        <h2 class="resultado" id="resultado"></h2>
+        <footer class="rodape">
+<p>Todos os direitos reservados para Caio Felipe Rocha Gomes</p>
+        </footer>
+
+<script>
+    var numeroSecreto = parseInt(Math.random() * 11)
+
+function Gerar() {
+  var elementoResultado = document.getElementById("resultado")
+  var chute = parseInt(document.getElementById("valor").value) 
+ console.log(chute)
+  if (chute == numeroSecreto){
+    elementoResultado.innerHTML = "Você acertou"
+  }else if (chute > 10 || chute < 0){
+    elementoResultado.innerHTML = "voce deve digitar um número entre 0 e 10"
+  }
+  else{
+    elementoResultado.innerHTML = "errou, o numero secreto era " + numeroSecreto
+  }
+}
+</script>
+</body>
+</html>
